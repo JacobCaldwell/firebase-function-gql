@@ -3,9 +3,10 @@ const functions = require("firebase-functions");
 const express = require('express');
 const serviceAccount = require('./serviceAccountKey.json');
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-})
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// })
+admin.initializeApp()
 
 const { ApolloServer, ApolloError, gql } = require('apollo-server-express');
 
