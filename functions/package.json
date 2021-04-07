@@ -4,6 +4,7 @@
   "scripts": {
     "serve": "firebase emulators:start --only functions",
     "emulators": "firebase emulators:start",
+    "stop": "lsof -t -i :5000 -i :5001 -i :5002 -i :8085 -i :8080 -i :9000 -i :9099 | xargs kill -9",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
@@ -22,6 +23,7 @@
     "typescript": "^4.2.3"
   },
   "devDependencies": {
+    "@types/node": "^10.17.56",
     "firebase-functions-test": "^0.2.0"
   },
   "private": true
